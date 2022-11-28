@@ -20,8 +20,6 @@ const getAuth = async (req: FastifyRequest, reply: GetAuthResponse) => {
 const postAuth = async (req: FastifyRequest, reply: PostAuthResponse) => {
   // Api key flow: delete next line if your connector uses OAuth
   const authConfig = await authService.validate(req.integrationConfig)
-  // OAuth flow: uncomment next line if your connect uses OAuth otherwise delete it
-  // const authConfig = await authService.generateAuthorizationUrl(req.integrationConfig)
 
   if (!authConfig) {
     await reply.status(403).send({
@@ -35,7 +33,7 @@ const postAuth = async (req: FastifyRequest, reply: PostAuthResponse) => {
 }
 
 const postAuthRefresh = async (req: FastifyRequest, reply: PostAuthRefreshResponse) => {
-  const authConfig = await authService.refresh(req.integrationConfig, req.authConfig)
+  const authConfig = await authService.refresh()
 
   if (!authConfig) {
     await reply.status(403).send({
@@ -52,7 +50,7 @@ const postAuthResponse = async (
   req: FastifyRequest<{ Body: PostAuthResultRequestPayload }>,
   reply: PostAuthResultResponse,
 ) => {
-  const credentials = await authService.getAuthCredentials(req.body)
+  const credentials = await authService.getAuthCredentials()
 
   if (!credentials) {
     await reply.status(403).send({

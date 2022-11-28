@@ -1,5 +1,5 @@
 // TODO: implement integration tests
-describe('Template service', () => {
+describe('Courier service', () => {
   it.skip('skip', () => {
     expect(true).toBe(true)
   })

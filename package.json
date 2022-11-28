@@ -1,8 +1,8 @@
 {
-  "name": "@lokalise/template-connector",
+  "name": "@lokalise/courier-connector",
   "private": true,
   "version": "1.0.0",
-  "description": "Template connector for Lokalise Content type app engine",
+  "description": "Courier connector for Lokalise Content type app engine",
   "main": "server.js",
   "scripts": {
     "copy:config": "cpy --rename=.env .env.default ./",

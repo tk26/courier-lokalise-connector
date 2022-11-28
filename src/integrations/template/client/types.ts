@@ -1,1 +1,1 @@
-// TODO: template connector 3-rd party client types
+// TODO: Courier connector 3-rd party client types

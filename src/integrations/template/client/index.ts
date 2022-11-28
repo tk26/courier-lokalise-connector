@@ -1,1 +1,1 @@
-// TODO: template connector 3-rd party client implementation
+// TODO: Courier connector 3-rd party client implementation

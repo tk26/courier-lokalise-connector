@@ -1,4 +1,4 @@
-# Template connector for Lokalise content type app engines
+# Courier connector for Lokalise content type app engines
 
 Lokalise **content exchange apps** facilitate the exchange of translatable content between Lokalise and third party content platforms. Users interact with them to connect both systems, select the content they want to translate, transfer it to Lokalise, see the translation status, and send the translations back to the content platform.
 
@@ -7,7 +7,7 @@ You can build and publish **your own content exchange app** by building a connec
 ```ascii
  ------------------     -------------------------     ----------------
 | Your content app | = | Lokalise content engine | + | Your connector |
- ------------------     -------------------------     ----------------  
+ ------------------     -------------------------     ----------------
 ```
 
 In this repository you will find **TypeScript code that you can use as a template** for your Lokalise content exchange connector.
@@ -70,6 +70,6 @@ Openapi docs are available at [connector-openapi](https://github.com/lokalise/co
 
 ## License
 
-This library is licensed under the [Apache 2.0 license](LICENSE). 
+This library is licensed under the [Apache 2.0 license](LICENSE).
 
 Copyright (c) [Lokalise](https://lokalise.com/).

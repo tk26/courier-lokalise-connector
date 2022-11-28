@@ -1,34 +1,26 @@
-import type { PostAuthResultRequestPayload } from 'src/routes/auth/types'
-import type { AuthConfig, IntegrationConfig } from 'src/types'
+import type { IntegrationConfig } from 'src/types'
 
 // API key flow
 const validate = async (config: IntegrationConfig) => {
-  // TODO: implementation
-  // response structure depends on platform specificity
   return Promise.resolve({
-    key: 'apiKey',
+    key: config.apiKey,
   })
 }
 
-// OAuth flow
-const generateAuthorizationUrl = async (config: IntegrationConfig) => {
-  // TODO: implementation
-  // response structure depends on auth strategy and platform specificity
+// OAuth flow (N/A for Courier)
+const generateAuthorizationUrl = async () => {
   return Promise.resolve({
     url: 'https://example.io',
   })
 }
 
-const refresh = async (config: IntegrationConfig, auth: AuthConfig) => {
-  // TODO: implementation
-  // response structure depends on auth strategy and platform specificity
+const refresh = async () => {
   return Promise.resolve({
     key: 'apiKey',
   })
 }
 
-const getAuthCredentials = async (authData: PostAuthResultRequestPayload) => {
-  // TODO: implementation
+const getAuthCredentials = async () => {
   return Promise.resolve({
     accessToken: 'accessToken',
     expiresIn: 2000,

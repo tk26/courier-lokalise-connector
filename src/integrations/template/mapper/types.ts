@@ -1,1 +1,1 @@
-// TODO: template connector 3-rd party mapper types
+// TODO: Courier connector 3-rd party mapper types
